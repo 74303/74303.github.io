@@ -16,6 +16,10 @@ body {
   background-size: cover;
 }
 
+.jumbotron{
+  margin-bottom: 0;
+}
+
 #home figcaption{
   text-align: center;
   position: absolute;
@@ -30,7 +34,6 @@ body {
 /* 見出し */
 .contents{
   padding-top: 20px;
-  padding-bottom: 150px;
 }
 .contents h2{
   font-weight: bold;
@@ -42,12 +45,12 @@ small{
 }
 
 /* 初期画面（Home以外非表示） */
-/*#home{
+#home{
   display: block;
 }
 #about, #project, #research{
   display: none;
-}*/
+}
 
 
 
@@ -66,7 +69,7 @@ a, a:hover{
   padding: 20px 10px 10px 10px;
 }
 h3{
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .nav-link, .nav-link:hover{
@@ -76,7 +79,7 @@ h3{
 
 /* サイドバー　マウスホバー時の下線 */
 .menu{
-  padding: 5px;
+  padding: 7px;
 }
 .menu a{
   position: relative;
@@ -143,6 +146,7 @@ ul.about-list{
   position: relative;
   margin-bottom: 1.3em;
   text-align: center;
+  font-weight: bold;
 }
 h5.about-title::before{
   content: '';
