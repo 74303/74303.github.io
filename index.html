@@ -140,8 +140,8 @@
       <div class="row">
         
         <div class="project_list col-lg-4 col-md-6">
-          <div class="image border" id="kurioneiro" data-toggle="modal" data-target="#Modal_kurioneiro">
-            <img src="img/project/kurioneiro.png" class="img-fluid" onclick="OnLinkClick(10);">
+          <div class="image border" id="kurioneiro" data-toggle="modal" data-target="#Modal_kurioneiro" onclick="OnLinkClick(10);">
+            <img src="img/project/kurioneiro.png" class="img-fluid">
             <div class="overview">
               <figcaption>
                 <h5 class="study">くりおねいろ</h5>
@@ -333,8 +333,8 @@
         </div>
         
         <div class="project_list col-lg-4 col-md-6">
-          <div class="image border" id="othello" data-toggle="modal" data-target="#Modal_othello">
-            <img src="img/project/othello.png" class="img-fluid" onclick="OnLinkClick(11);">
+          <div class="image border" id="othello" data-toggle="modal" data-target="#Modal_othello" onclick="OnLinkClick(11);">
+            <img src="img/project/othello.png" class="img-fluid">
             <div class="overview">
               <figcaption>
                 <h5 class="study">ひとぴのれんしゅう</h5>
@@ -638,35 +638,15 @@
   </script>
   <script>
     jQuery('#Modal_kurioneiro').on('hidden.bs.modal', function (e) {
-      var src1 = $("#kurione_movie1 iframe").attr("src");
-      //var src2 = $("#kurione_movie2 iframe").attr("src");
-      $("#kurione_movie1 iframe").attr("src","");
-      //$("#kurione_movie2 iframe").attr("src","");
-      //location.reload();
-      //$(window).scrollTop($('#project').offset().top);
-    });
-    jQuery('#Modal_othello').on('hidden.bs.modal', function (e) {
-      var src = $("#othello_movie iframe").attr("src");
-      $("#othello_movie iframe").attr("src","");
-      //location.reload();
-      //$(window).scrollTop($('#project').offset().top);
+      $("#kurione_movie1 iframe").remove();
     });
   </script>
   <script>
-    function OnLinkClick(num){
-      switch(num){
-        case 10:
-          $('#kurione_movie1').prepend('<iframe class="embed-responsive-item" src="img/project/mixed-and-analysis.mp4"></iframe>');
-          break;
-        
-        case 11:
-          $('#othello_movie').prepend('<iframe class="embed-responsive-item" src="img/project/java_movie.mp4"></iframe>');
-          break;
-      }
-    }
-  </script>-->
-  <!--<script type="text/javascript" src="movie.js"></script>-->
-  <!--<script type="text/javascript" src="content_change.js"></script>-->
+    jQuery('#Modal_othello').on('hidden.bs.modal', function (e) {
+      $("#othello_movie iframe").remove();
+    });
+  </script>
+  <script type="text/javascript" src="change.js"></script>
 </body>
 
 </html>
