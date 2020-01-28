@@ -176,18 +176,18 @@
                   </p>
                   <h5>動画で紹介</h5>
                   <ul id="kurione-movie">
-                  <li class="kurione-movie">
+                  <li>
                     <p>混色 → 分解 <b>（※ 音あり）</b></p>
-                    <div class="embed-responsive embed-responsive-16by9" id="kurione_movie1">
+                    <div class="embed-responsive embed-responsive-16by9" id="kurione-movie1">
                       <iframe class="embed-responsive-item" src="img/project/mixed-and-analysis.mp4"></iframe>
                     </div>
                   </li>
-                  <li class="kurione-movie">
+                  <!--<li class="kurione-movie">
                     <p>キャンバスが汚れてきたら... <b>（※ 音あり）</b></p>
                     <div class="embed-responsive embed-responsive-16by9" id="kurione_movie2">
                       <iframe class="embed-responsive-item" src="img/project/reset.mp4"></iframe>
                     </div>
-                  </li>
+                  </li>-->
                   </ul>
                 </div>
                 <div class="modal-footer">
@@ -640,13 +640,11 @@
   <script>
     jQuery('#Modal_kurioneiro').on('hidden.bs.modal', function (e) {
       var src1 = $("#kurione_movie1 iframe").attr("src");
-      var src2 = $("#kurione_movie2 iframe").attr("src");
+      //var src2 = $("#kurione_movie2 iframe").attr("src");
       $("#kurione_movie1 iframe").attr("src","");
       $("#kurione_movie2 iframe").attr("src","");
       location.reload();
       $(window).scrollTop($('#project').offset().top);
-      //$('#home').css('display':'none');
-      //$('#project').css('display':'block');
     });
     jQuery('#Modal_othello').on('hidden.bs.modal', function (e) {
       var src = $("#othello_movie iframe").attr("src");
@@ -655,6 +653,7 @@
       $(window).scrollTop($('#project').offset().top);
     });
   </script>
+  <!--<script type="text/javascript" src="movie.js"></script>-->
   <!--<script type="text/javascript" src="content_change.js"></script>-->
 </body>
 
