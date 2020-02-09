@@ -135,7 +135,7 @@ img#about-img{
 
 #about-img-div{
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 /* 所属・資格・受賞歴 */
@@ -143,7 +143,7 @@ ul.about-list{
   list-style: none;
 }
 .about-title{
-  padding-top: 15px;
+  padding-top: 30px;
   position: relative;
   margin-bottom: 1.3em;
   text-align: center;
@@ -166,7 +166,7 @@ h5.about-title::before{
 #skills-box{
   background-color: #fff;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 45px;
   margin-bottom: 20px;
   padding: 15px 10px;
 }
