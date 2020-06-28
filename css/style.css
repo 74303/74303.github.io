@@ -30,6 +30,12 @@ body {
   -ms-transform: translate(-50%, -50%);
 }
 
+h2{
+  padding: 0 0.5em;/*上下 左右の余白*/
+  background: transparent;/*背景透明に*/
+  border-left: solid 10px #5CA6B0;/*左線*/
+}
+
 
 /* 見出し */
 .contents{
