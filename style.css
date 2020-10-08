@@ -1,0 +1,411 @@
+:root{
+  --font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, 'Open Sans', sans-serif;
+  letter-spacing: 0.07em
+}
+
+
+.jumbotron-extend {
+  position: relative;
+  height: 100vh;  /* 画面の高さいっぱい */
+  min-height: 300px;
+  background: url(../img/home5.jpg) no-repeat center center;
+  background-size: cover;
+}
+h1{
+  text-transform: uppercase;
+}
+
+.jumbotron{
+  margin-bottom: 0;
+}
+
+#home figcaption{
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+h2{
+  padding: 0 0.5em;/*上下 左右の余白*/
+  margin-bottom: 24px;
+  background: transparent;/*背景透明に*/
+  border-left: solid 10px #5CA6B0;/*左線*/
+}
+
+
+/* 見出し */
+/*.contents{
+  padding-top: 20px;
+}*/
+.contents h2{
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* 小見出し */
+small{
+  font-size: 60%;
+  margin-left: 1em;
+}
+
+/* 初期画面（Home以外非表示） */
+/*#home{
+  display: block;
+}
+#about, #project, #research{
+  display: none;
+}*/
+
+#about, #project, #research{
+  padding: 56px 0;
+  margin-left: 56px;
+}
+
+
+/*** サイドバー ***/
+
+/* タイトル */
+a, a:hover{
+  color: #5CA6B0;
+  text-decoration: none ;
+}
+#nav-title{
+  color: #5CA6B0;
+  font-weight: bold;
+}
+#navbarCollapse ul{
+  padding: 20px 10px 10px 10px;
+}
+h3{
+  /*margin-bottom: 50px;*/
+  padding: 36px 0;
+}
+
+.nav-link, .nav-link:hover{
+  color: #000;
+  font-weight: bold;
+}
+.menu a{
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+/* サイドバー　マウスホバー時の下線 */
+.menu{
+  padding: 7px;
+}
+.menu a{
+  position: relative;
+  display: inline-block;  /* 文字幅に合わせる */
+  text-decoration: none;
+  padding: 0;
+  margin: 5px;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  color: #000;
+  background-color: rgba(0, 0, 0, 0);
+  border-bottom: solid 2px #5CA6B0;
+}
+.nav-pills .nav-link {
+  border-radius: 0rem;
+}
+.nav-link::after{
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #5CA6B0;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .2s;
+}
+.nav-link:hover::after{
+  transform: scale(1, 1);
+}
+
+/* バーガー */
+.navbar-dark .navbar-toggler {
+  border-color: rgba(0,0,0,0);
+  background-color: rgba(92,166,176,0.3);
+}
+
+
+
+/*** About ***/
+
+img#about-img{
+  margin: auto;
+  border-radius: 50%;
+  filter: sepia(0.2) opacity(0.8);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#about-img-div{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 所属・資格・受賞歴 */
+ul.about-list{
+  list-style: none;
+}
+.about-title{
+  padding-top: 30px;
+  position: relative;
+  margin-bottom: 1.3em;
+  text-align: center;
+  font-weight: bold;
+}
+h5.about-title::before{
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  display: inline-block;
+  width: 10%;
+  height: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #5CA6B0;
+  border-radius: 2px;
+}
+
+li.about-li{
+  margin: 15px;
+}
+
+ul.about-list{
+  position: relative;
+  padding: 15px 15px 10px; /* 上 左右 下 */
+  margin-top: 20px;
+  border: solid 2px #5CA6B0;
+  border-radius:8px;
+}
+ul.about-list:before{
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0 10px;
+  color: #5CA6B0;
+  background-color: #f8f9fa;
+}
+ul#affiliate:before{
+  content: "所属";
+}
+ul#certification:before{
+  content: "資格";
+}
+ul#award:before{
+  content: "受賞歴";
+}
+
+
+/* Skills - タイトル */
+#skills_title{
+  padding: 15px 0 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Skills - 画像と文字 */
+.skills img.back{
+  filter: brightness(95%) blur(0.5px);
+  border-radius: 50%;
+}
+.skills img.icon{
+  width: 40%;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.skills h5{
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.skills p{
+  font-size: 12px;
+  color: darkgray;
+}
+
+
+/*** Project ***/
+
+/* 配置 */
+.project_list{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+/* 画像フィルター */
+.overview figcaption{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.image:hover figcaption{
+  opacity: 0;
+  transition-duration: 0.2s;
+}
+.image img{
+  filter: sepia(0.2) opacity(0.2) grayscale(0.7) hue-rotate(30deg) blur(0.5px);
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+  transform: translateY(-2px);
+  transition-duration: 0.2s;
+}
+#kurioneiro:hover img, #dearpets:hover img, #A0:hover img,
+#kouen:hover img, #othello:hover img, #interior:hover img,
+#tshirt:hover img, #summerconcert:hover img, #teien39th:hover img{
+  filter: none;
+  box-shadow: none;
+  /*box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);*/
+  transform: translateY(2px);
+  transition-duration: 0.2s;
+}
+
+/* 画像上の文字 */
+.overview figcaption{
+  text-shadow: 0 0 5px #fff;
+  text-align: center;
+}
+.overview h5.study{
+  font-weight: bold;
+  color: #5CA6B0;
+}
+.overview h5.club{
+  font-weight: bold;
+  color: #DCC265;
+}
+.overview p{
+  text-align: center;
+  font-size: small;
+  color: #222;
+}
+
+/* モーダルウィンドウ */
+.modal-body p{
+  text-align: left;
+}
+
+.modal-body ul li{
+  font-size: small;
+  display: inline;
+  margin-right: 1em;
+  white-space:nowrap;
+}
+
+ul{
+  padding: 0;
+}
+
+/* くりおねいろ動画 */
+ul#kurione-movie li{
+  font-size: initial;
+}
+
+
+
+/*** Research ***/
+
+.card-body figcaption{
+  position: left;
+}
+/*
+.research_list:hover{
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+  transition-duration: 0.2s;
+}
+*/
+.research_list h4{
+  color: #5CA6B0;
+  font-weight: bold;
+}
+
+/* ボタンの色 */
+/* 通常のボタン色 */
+.btn-pink,
+.btn-pink.disabled, .btn-pink:disabled {
+  color: #fff;
+  background-color: #5CA6B0;
+  border-color: #5CA6B0;
+}
+/* focusされた時の枠線の色 */
+.btn-pink:focus, .btn-pink.focus,
+.btn-pink:not(:disabled):not(.disabled):active:focus, .btn-pink:not(:disabled):not(.disabled).active:focus,
+.show > .btn-pink.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(92, 166, 176, 0.5);
+}
+/* hover時（マウスカーソルを重ねた時）の色（通常より濃いor暗めの色を指定） */
+.btn-pink:hover {
+  color: #fff;
+  background-color: #3e8892;
+  border-color: #3e8892;
+}
+/* active時の色（hover時と同等かさらに濃いor暗めの色を指定） */
+.btn-pink:not(:disabled):not(.disabled):active, .btn-pink:not(:disabled):not(.disabled).active,
+.show > .btn-pink.dropdown-toggle {
+  color: #fff;
+  background-color: #3882C0;
+  border-color: #3882C0;
+}
+
+
+
+#home, #about, #project, #research{
+  animation-name: fadein;
+  animation-duration: 0.9s;
+}
+@keyframes fadein{
+  from{
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+@media(max-width: 992px){
+  #about, #project, #research{
+    margin-left: 0px;
+  }	
+  .contents{
+    padding-top: 60px;
+  }
+  nav ul{
+    background-color: rgba(248, 249, 250, 0.9);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.33);
+    border-top: solid 4px #5CA6B0;
+    border-bottom: solid 4px #5CA6B0;
+  }
+  img#about-img{
+    max-width: 250px;
+  }
+}

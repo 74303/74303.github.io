@@ -10,7 +10,7 @@
     
   <link rel="stylesheet" href="css/style.css">
 
-  <title>Yamamoto's Portfolio</title>
+  <title>YAMAMOTO's Portfolio</title>
 </head>
   
 <body data-spy="scroll" data-target="#navbarCollapse" class="bg-light">
@@ -19,13 +19,13 @@
 <div class="row">
       
   <!--== Navigation ==-->
-  <nav class="navbar-expand-lg col-lg-2 fixed-top navbar-dark">
+  <nav class="navbar-expand-lg col-xl-2 col-lg-3 fixed-top navbar-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <ul class="nav nav-pills flex-column text-center">
-        <h3><a id="nav-title">Yamamoto's Portfolio</a></h3>
+        <h3><a id="nav-title">YAMAMOTO's Portfolio</a></h3>
         <li class="nav-item menu"><a class="nav-link active menu" href="#home" onclick="OnLinkClick(0);">Home</a></li>
         <li class="nav-item menu"><a class="nav-link menu" href="#about" onclick="OnLinkClick(1);">About</a></li>
         <li class="nav-item menu"><a class="nav-link menu" href="#project" onclick="OnLinkClick(2);">Project</a></li>
@@ -36,7 +36,7 @@
   
     
   <!--== Contents ==-->
-  <div class="col-lg-10 offset-lg-2">
+  <div class="col-xl-10 col-lg-9 offset-xl-2 offset-lg-3">
  
     <!-- Home -->
     <section id="home">      
@@ -67,64 +67,66 @@
         </div>
         <div class="w-100"></div>
         <div class="col-md-4">
-          <h5 class="about-title text-center">所属</h5>
-          <ul class="about-list text-center">
-            <li>和歌山大学大学院</li>
-            <li>システム工学研究科</li>
-            <li><p style="font-size: small; margin-top: 10px; margin-bottom: -1px;">クラスター</p>デザイン科学クラスタ―</li>
-            <li><p style="font-size: small; margin-top: 10px; margin-bottom: -1px;">研究室</p>ソフトウェアデザイン研究室</li>
+          <!--<h5 class="about-title text-center">所属</h5>-->
+		    <ul class="about-list" id="affiliate">
+              <li class="about-li">和歌山大学大学院<br>システム工学研究科</li>
+              <li class="about-li"><p style="font-size: small; margin-top: 10px; margin-bottom: -1px; color: darkgray;">クラスター</p>デザイン科学クラスタ―</li>
+              <li class="about-li"><p style="font-size: small; margin-top: 10px; margin-bottom: -1px;color: darkgray;">研究室</p>ソフトウェアデザイン研究室</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+          <!--<h5 class="about-title">資格</h5>-->
+          <ul class="about-list" id="certification">
+            <li class="about-li"><p style="font-size: small; margin-top: 10px; margin-bottom: -1px; color: darkgray;">2017. 12</p>カラーコーディネーター検定試験2級<br>合格</li>
+            <li class="about-li"><p style="font-size: small; margin-top: 10px; margin-bottom: -1px; color: darkgray;">2019. 10</p>日本人間工学会認定<br>人間工学準専門家</li>
           </ul>
         </div>
         <div class="col-md-4">
-          <h5 class="about-title text-center">資格</h5>
-          <ul class="about-list text-center">
-            <li>カラーコーディネーター2級<p style="font-size: small;">2017. 12</p></li>
-            <li>認定人間工学準専門家<p style="font-size: small;">2019. 10</p></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5 class="about-title text-center">受賞歴</h5>
-          <ul class="about-list text-center">
-            <li>OGIS-RI Software Challenge Award 2017 審査員特別賞<p style="font-size: small;">2017. 11</p></li>
-            <li>学業優秀者として表彰<p style="font-size: small;">2018. 03</p></li>
-            <li>第1回 Sigfoxで生活を楽しくするIoTアイデアコンテスト<p style="font-size: small;">2018. 12</p></li>
+          <!--<h5 class="about-title">受賞歴</h5>-->
+          <ul class="about-list" id="award">
+            <li class="about-li"><p style="font-size: small; margin-top: 10px; margin-bottom: -1px; color: darkgray;">2017. 11</p>OGIS-RI Software Challenge Award 2017 審査員特別賞</li>
+            <li class="about-li"><p style="font-size: small; margin-top: 10px; margin-bottom: -1px; color: darkgray;">2018. 03</p>学業優秀者として表彰</li>
+            <li class="about-li"><p style="font-size: small; margin-top: 10px; margin-bottom: -1px; color: darkgray;">2018. 12</p>第1回 Sigfoxで生活を楽しくするIoTアイデアコンテスト 本戦出場</li>
           </ul>
         </div>
       </div>
         
+      <h5 id="skills_title">Skills</h5>
       <div class="row" id="skills-box">
-        <div class="col-md-4 offset-md-4">
-          <h5 class="about-title">Skills</h5>
-        </div>
-        <div class="w-100"></div>
         <div class="col-md-4 skills">
-          <img src="img/about/design.jpg" class="back img-fluid">
-          <div class="skills_list">
-            <figcaption>
+          <div class="row no-gutters">
+            <div class="col-5">
+              <img src="img/about/design.jpg" class="back img-fluid">
               <img src="img/about/icon_design.png" class="icon img-fluid">
-              <h4>Design</h4>
-              <p>UI UX HCD<br>モデリング</p>
-            </figcaption>
+            </div>
+            <div class="col-7 pl-3">
+              <h5>Design</h5>
+              <p>UI，UX，人間中心設計，人間工学，3Dモデリング</p>
+            </div>
           </div>
         </div>
         <div class="col-md-4 skills">
-          <img src="img/about/programming.jpg" class="back img-fluid">
-          <div class="skills_list">
-            <figcaption>
+          <div class="row no-gutters">
+            <div class="col-5">
+              <img src="img/about/programming.jpg" class="back img-fluid">
               <img src="img/about/icon_programming.png" class="icon img-fluid">
-              <h4>Programming</h4>
-              <p>ソフトウェア工学<br>ウェブ</p>
-            </figcaption>
+            </div>
+            <div class="col-7 pl-3">
+              <h5>Technology</h5>
+              <p>ウェブ，プログラミング，ソフトウェア工学</p>
+            </div>
           </div>
         </div>
         <div class="col-md-4 skills">
-          <img src="img/about/planning.jpg" class="back img-fluid">
-          <div class="skills_list">
-            <figcaption>
+          <div class="row no-gutters">
+            <div class="col-5">
+              <img src="img/about/planning.jpg" class="back img-fluid">
               <img src="img/about/icon_planning.png" class="icon img-fluid">
-              <h4>Planning</h4>
-              <p>デザイン思考<br>クラスター分析</p>
-            </figcaption>
+            </div>
+            <div class="col-7 pl-3">
+              <h5>Planning</h5>
+              <p>デザインシンキング，クラスタ分析</p>
+            </div>
           </div>
         </div>
       </div>
@@ -649,6 +651,7 @@
     });
   </script>
   <script type="text/javascript" src="change.js"></script>
+
 </body>
 
 </html>
